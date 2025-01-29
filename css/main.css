@@ -111,7 +111,7 @@ nav ul li {
 
 .hero {
   min-height: 100vh;
-  background-image: url("/images/maldives.jpg");
+  background-image: url("../images/maldives.jpg");
   background-size: cover;
   background-blend-mode: overlay;
 }
