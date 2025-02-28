@@ -60,7 +60,7 @@
                             <div class="card__content">
                                 <h2 class="card__title"><?php the_title(); ?></h2>
                                 <p class="card__description"><?php the_content() ?>
-                                    <a href="<?php echo get_home_url(); ?>">Return home</a>
+                                    <a href="<?php echo get_home_url(); ?>" class="hero__button"><< Return home</a>
                                 </p>
                             </div>
                         </div>

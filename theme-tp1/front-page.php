@@ -44,6 +44,7 @@
 </section>
 <section class="populaire global">
     <div class="global">
+        <h2>Destinations populaires</h2>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php if (in_category('Galerie')) {
                     the_content();
