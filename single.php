@@ -44,26 +44,23 @@
 </section>
 <section class="populaire global">
     <div class="global">
-        <h2>Destinations populaires</h2>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php if (in_category('Galerie')) {
                     the_content();
                 } else { ?>
                     <article>
-                        <div class="card card--big">
+                        <div class="">
                             <div class="carte__image">
                                 <?php
                                 if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
+                                    the_post_thumbnail('large');
                                 }
                                 ?>
                             </div>
                             <div class="card__content">
-                                <a href="<?php the_permalink(); ?>">
-                                    <h2 class="card__title"><?php the_title(); ?></h2>
-                                </a>
-                                <p class="card__description"><?php echo wp_trim_words(get_the_excerpt(), 100, ""); ?>
-                                    <a href="<?php the_permalink(); ?>">[...] Lire la suite</a>
+                                <h2 class="card__title"><?php the_title(); ?></h2>
+                                <p class="card__description"><?php the_content() ?>
+                                    <a href="<?php echo get_home_url(); ?>" class="hero__button"><< Return home</a>
                                 </p>
                             </div>
                         </div>
