@@ -3,12 +3,10 @@
 <section class="hero">
     <div class="hero__content global">
         <h1 class="hero__title">
-            Travel with Bougeotte Voyages
+        <?php bloginfo( 'name' ); ?>
         </h1>
         <p class="hero__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur est officiis, mollitia minus
-            asperiores quas libero saepe consequuntur at blanditiis et eligendi, sequi sit quae laboriosam, ex
-            delectus nesciunt.
+        <?php bloginfo( 'description' ); ?>
         </p>
         <a href="" class="hero__email">
             info@bougeottevoyages.com
