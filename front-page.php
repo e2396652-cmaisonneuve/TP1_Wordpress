@@ -11,8 +11,7 @@
         <a href="" class="hero__email">
             info@bougeottevoyages.com
         </a>
-        <div class="hero__social">
-            <?php get_template_part('gabarits/icone-sociaux'); ?>
+        <div class="hero__social"><?php get_template_part('gabarits/icone-sociaux'); ?>
         </div>
         <form class="hero__form">
             <div class="form__group">
@@ -46,26 +45,7 @@
                 <?php if (in_category('Galerie')) {
                     the_content();
                 } else { ?>
-                    <article>
-                        <div class="card card--big">
-                            <div class="carte__image">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
-                                }
-                                ?>
-                            </div>
-                            <div class="card__content">
-                                <a href="<?php the_permalink(); ?>">
-                                    <h2 class="card__title"><?php the_title(); ?></h2>
-                                </a>
-                                <p class="card__description"><?php echo wp_trim_words(get_the_excerpt(), 100, ""); ?>
-                                    <a href="<?php the_permalink(); ?>">[...] Lire la suite</a>
-                                </p>
-                            </div>
-                        </div>
-
-                    </article>
+                   <?php get_template_part('gabarits/carte'); ?>
                 <?php } ?>
         <?php endwhile;
         endif; ?>
