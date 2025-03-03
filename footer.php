@@ -2,10 +2,11 @@
     <div class="global flex">
         <section class="footer__about">
             <h4 class="footer__titre">Bougeotte Voyages</h4>
-            <p class="footer__description">Travel with us! Lorem ipsum dolor sit amet consectetur.</p>
-            <h4 class="footer__titre">Contact</h4>
+            <p class="footer__description"><?php bloginfo( 'description' ); ?></p>
             <p class="footer__courriel">info@bougeottevoyages.com</p>
             <p class="footer__phone">514-123-4567</p>
+            <p class="hero__social">             <?php get_template_part('gabarits/icone-sociaux'); ?>
+</p>
         </section>
         <section class="footer__horaire">
 
@@ -19,7 +20,7 @@
             </form>
         </section>
         <section class="footer__links">
-            <h4 class="footer__titre">Menu</h4>
+            <h4 class="footer__titre">Categories</h4>
             <div class="footer__navigation">
                 <?php wp_nav_menu(array('theme_location' => 'footer-menu', 'menu' => 'menu-principal', 'container' => 'p', 'container_class' => '', 'container_id' => '', 'container_aria_label' => '', 'menu_class' => '')) ?>
             </div>
