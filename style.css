@@ -127,8 +127,9 @@ nav ul li:last-child {
 .hero {
   min-height: 70vh;
   background-image: url("images/maldives.jpg");
-  background-size: cover;
-  background-blend-mode: overlay;
+	max-width: 100%;
+	min-width: 100%;
+	object-fit: cover;
 }
 
 .hero__content {
@@ -142,6 +143,14 @@ nav ul li:last-child {
 
 .hero__description {
   max-width: 60ch;
+}
+
+.hero__social {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .hero__button {
@@ -221,6 +230,13 @@ footer ul li {
   list-style-type: none;
 }
 
+.footer__social{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 /* ARTICLE */
 
 article {
@@ -268,4 +284,16 @@ article {
   cursor: pointer;
   display: inline-block;
   gap: 10px;
+}
+
+/* RECHERCHE PAGE */
+
+.recherche__section {
+  margin-bottom: 60px;
+}
+
+.resultats__recherche {
+  color: #d80724;
+  font-size: 2rem;
+  font-weight: 800;
 }

@@ -5,7 +5,7 @@
             <p class="footer__description"><?php bloginfo( 'description' ); ?></p>
             <p class="footer__courriel">info@bougeottevoyages.com</p>
             <p class="footer__phone">514-123-4567</p>
-            <p class="hero__social">             <?php get_template_part('gabarits/icone-sociaux'); ?>
+            <p class="footer__social"><?php get_template_part('gabarits/icone-sociaux'); ?>
 </p>
         </section>
         <section class="footer__horaire">
@@ -13,11 +13,13 @@
             <h4 class="footer__titre">Horaire</h4>
             <p class="footer__jour">Lundi au vendredi</p>
             <p class="footer__heure">8h00 à 17h00</p>
-            <h4 class="footer__titre">Search</h4>
-            <form action="" method="get" class="footer__form">
-                <input type="search" name="search" id="search" class="footer__input" placeholder="Recherche...">
-                <button type="submit" class="footer__button">Recherche</button>
-            </form>
+            <form class="recherche" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+    <label>
+        <input class="recherche__input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
+    </label>
+    <button class="recherche__bouton" type="submit">Rechercher
+    </button>
+</form>
         </section>
         <section class="footer__links">
             <h4 class="footer__titre">Categories</h4>

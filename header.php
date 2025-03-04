@@ -30,10 +30,14 @@ echo '<a href="' . esc_url(home_url('/')) . '">' . get_bloginfo('name') . '</a>'
             <input type="checkbox" name="" id="chk-burger" class="chk-burger">
             <div class="header__navigation">
                 <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu' => 'menu-principal', 'container' => 'nav', 'container_class' => '', 'container_id' => '', 'container_aria_label' => '', 'menu_class' => '')) ?>
-                <form action="" method="get" class="footer__form">
-                <input type="search" name="search" id="search" class="footer__input" placeholder="Recherche...">
-                <button type="submit" class="footer__button">Recherche</button>
-            </form>
+                <form class="recherche" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+    <label>
+        <input class="recherche__input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
+    </label>
+    <button class="recherche__bouton" type="submit">
+    Rechercher
+    </button>
+</form>
             </div>
         </div>
     </header>
