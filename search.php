@@ -40,16 +40,15 @@ get_header();
                     </article>
             <?php endwhile; ?>
 
-            <!-- Pagination -->
-            <nav class="recherche__pagination">
-                <?php
-                the_posts_pagination(array(
-                    'prev_text' => 'Précédent',
-                    'next_text' => 'Suivant',
-                    'mid_size'  => 2,
-                ));
-                ?>
-            </nav>
+<!-- Pagination -->
+<div class="category__pagination">
+<?php $args = array(
+	'format'    => 'page/%#%/', 
+	'prev_text' => '← Précédent', 
+	'next_text' => 'Suivant →'
+);
+the_posts_pagination($args); ?>
+</div>
         <?php else : ?>
             <!-- Cas "aucun résultat" -->
             <div class="recherche__aucun-resultat">

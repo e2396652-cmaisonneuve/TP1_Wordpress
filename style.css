@@ -323,3 +323,12 @@ article {
   font-size: 2rem;
   font-weight: 800;
 }
+
+/* PAGINATION */
+
+.category__pagination {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+ 
