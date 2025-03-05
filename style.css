@@ -17,6 +17,7 @@ BASE
 //////////////////////////////////// */
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://use.typekit.net/zyd2afn.css");
 
 body {
   font-size: 16px;
@@ -25,30 +26,49 @@ body {
 
 h1 {
   font-size: clamp(1rem, 2.5vw, 5rem);
+  font-family: "timonium", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 h2 {
   font-size: clamp(1rem, 2.5vw, 4rem);
+  font-family: "timonium", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 h3 {
   font-size: clamp(0.9rem, 2.5vw, 3rem);
+  font-family: "timonium", sans-serif;
+  font-weight: 700; 
+  font-style: normal;
 }
 
 h4 {
   font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+  font-family: "timonium", sans-serif;
+  font-weight: 700; 
+  font-style: normal;
 }
 
 h5 {
   font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  font-family: "timonium", sans-serif;
+  font-weight: 700; 
+  font-style: normal;
 }
 
 h6 {
   font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  font-family: "timonium", sans-serif;
+  font-weight: 700; 
+  font-style: normal;
 }
 
 p {
   font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  font-family: "Nunito", serif;
 }
 
 a {
@@ -98,7 +118,6 @@ picture img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 40px;
 }
 
 .header__menu {
@@ -126,7 +145,7 @@ nav ul li:last-child {
 
 .hero {
   min-height: 70vh;
-  background-image: url("images/maldives.jpg");
+  background-image: url("images/hero__image.jpg");
 	max-width: 100%;
 	min-width: 100%;
 	object-fit: cover;
@@ -139,10 +158,12 @@ nav ul li:last-child {
   margin: auto;
   padding: 30px;
   display: block;
+  color: #fff;
 }
 
 .hero__description {
-  max-width: 60ch;
+  max-width: 40ch;
+  font-size: 1.3rem;
 }
 
 .hero__social {
@@ -151,6 +172,11 @@ nav ul li:last-child {
   gap: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.hero__cta {
+margin-top: 25px;
+margin-bottom: 35px;
 }
 
 .hero__button {

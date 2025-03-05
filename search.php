@@ -32,7 +32,7 @@ get_header();
                                     <h2 class="card__title"><?php the_title(); ?></h2>
                                 </a>
                                 <p class="card__description"><?php echo wp_trim_words(get_the_excerpt(), 100, ""); ?>
-                                    <a href="<?php the_permalink(); ?>">[...] Lire la suite</a>
+                                    <a href="<?php the_permalink(); ?>">[...] Continuer la lecture</a>
                                 </p>
                             </div>
                         </div>

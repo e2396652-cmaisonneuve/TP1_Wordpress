@@ -11,20 +11,21 @@
         <section class="footer__horaire">
 
             <h4 class="footer__titre">Horaire</h4>
-            <p class="footer__jour">Lundi au vendredi</p>
-            <p class="footer__heure">8h00 à 17h00</p>
+            <p><strong>Lundi au vendredi</strong><br>
+            8h00 à 17h00</p>
             <form class="recherche" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
     <label>
+    <h4 class="footer__titre">Recherche</h4>
         <input class="recherche__input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
     </label>
     <button class="recherche__bouton" type="submit">Rechercher
     </button>
 </form>
         </section>
-        <section class="footer__links">
+        <section>
             <h4 class="footer__titre">Categories</h4>
-            <div class="footer__navigation">
-                <?php wp_nav_menu(array('theme_location' => 'footer-menu', 'menu' => 'menu-principal', 'container' => 'p', 'container_class' => '', 'container_id' => '', 'container_aria_label' => '', 'menu_class' => '')) ?>
+            <div>
+                <?php wp_nav_menu(array('theme_location' => 'footer-menu', 'menu' => 'menu-principal', 'container' => '', 'container_class' => '', 'container_id' => '', 'container_aria_label' => '', 'menu_class' => '')) ?>
             </div>
         </section>
         <section class="footer__links">
