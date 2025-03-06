@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="hero">
-<?php get_template_part('gabarits/hero'); ?>    
+    <?php get_template_part('gabarits/hero'); ?>
 </section>
 <section class="populaire global">
     <div class="global">
@@ -32,19 +32,19 @@
 
                     </article>
                 <?php } ?>
-                            
-                
+
+
         <?php endwhile;
         endif; ?>
         <!-- Pagination -->
         <div class="category__pagination">
-<?php $args = array(
-	'format'    => 'page/%#%/', 
-	'prev_text' => '← Précédent', 
-	'next_text' => 'Suivant →'
-);
-the_posts_pagination($args); ?>
-</div>
+            <?php $args = array(
+                'format'    => 'page/%#%/',
+                'prev_text' => '← Précédent',
+                'next_text' => 'Suivant →'
+            );
+            the_posts_pagination($args); ?>
+        </div>
 
     </div>
 

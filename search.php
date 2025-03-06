@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Modèle pour les résultats de recherche
  */
@@ -13,42 +14,43 @@ get_header();
         $search_query = get_search_query();
         ?>
         <h3>Résultats de recherche pour : "<?php echo esc_html($search_query); ?>"
-        <br><span class="resultats__recherche"><?php echo $total_results; ?> résultat(s) trouvé(s)</span></h3>
+            <br><span class="resultats__recherche"><?php echo $total_results; ?> résultat(s) trouvé(s)</span>
+        </h3>
 
         <!-- Liste des résultats -->
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-            <article>
-                        <div class="card card--big">
-                            <div class="carte__image">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
-                                }
-                                ?>
-                            </div>
-                            <div class="card__content">
-                                <a href="<?php the_permalink(); ?>">
-                                    <h2 class="card__title"><?php the_title(); ?></h2>
-                                </a>
-                                <p class="card__description"><?php echo wp_trim_words(get_the_excerpt(), 100, ""); ?>
-                                    <a href="<?php the_permalink(); ?>">[...] Continuer la lecture</a>
-                                </p>
-                            </div>
+                <article>
+                    <div class="card card--big">
+                        <div class="carte__image">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('medium');
+                            }
+                            ?>
                         </div>
+                        <div class="card__content">
+                            <a href="<?php the_permalink(); ?>">
+                                <h2 class="card__title"><?php the_title(); ?></h2>
+                            </a>
+                            <p class="card__description"><?php echo wp_trim_words(get_the_excerpt(), 100, ""); ?>
+                                <a href="<?php the_permalink(); ?>">[...] Continuer la lecture</a>
+                            </p>
+                        </div>
+                    </div>
 
-                    </article>
+                </article>
             <?php endwhile; ?>
 
-<!-- Pagination -->
-<div class="category__pagination">
-<?php $args = array(
-	'format'    => 'page/%#%/', 
-	'prev_text' => '← Précédent', 
-	'next_text' => 'Suivant →'
-);
-the_posts_pagination($args); ?>
-</div>
+            <!-- Pagination -->
+            <div class="category__pagination">
+                <?php $args = array(
+                    'format'    => 'page/%#%/',
+                    'prev_text' => '← Précédent',
+                    'next_text' => 'Suivant →'
+                );
+                the_posts_pagination($args); ?>
+            </div>
         <?php else : ?>
             <!-- Cas "aucun résultat" -->
             <div class="recherche__aucun-resultat">

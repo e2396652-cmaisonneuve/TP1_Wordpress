@@ -41,28 +41,28 @@ h2 {
 h3 {
   font-size: clamp(0.9rem, 2.5vw, 3rem);
   font-family: "timonium", sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
 }
 
 h4 {
   font-size: clamp(0.8rem, 2.5vw, 1.5rem);
   font-family: "timonium", sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
 }
 
 h5 {
   font-size: clamp(0.8rem, 2.5vw, 1.2rem);
   font-family: "timonium", sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
 }
 
 h6 {
   font-size: clamp(0.8rem, 2.5vw, 1.1rem);
   font-family: "timonium", sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -123,12 +123,14 @@ picture img {
 .header__menu {
   margin-right: 20px;
 }
+
 @media screen and (max-width: 700px) {
   .header__navigation {
     display: none;
     flex-direction: column;
   }
 }
+
 nav ul {
   display: flex;
   gap: 20px;
@@ -146,9 +148,9 @@ nav ul li:last-child {
 .hero {
   min-height: 70vh;
   background-image: url("images/hero__image.jpg");
-	max-width: 100%;
-	min-width: 100%;
-	object-fit: cover;
+  max-width: 100%;
+  min-width: 100%;
+  object-fit: cover;
 }
 
 .hero__content {
@@ -175,8 +177,8 @@ nav ul li:last-child {
 }
 
 .hero__cta {
-margin-top: 25px;
-margin-bottom: 35px;
+  margin-top: 25px;
+  margin-bottom: 35px;
 }
 
 .hero__button {
@@ -256,7 +258,7 @@ footer ul li {
   list-style-type: none;
 }
 
-.footer__social{
+.footer__social {
   color: white;
   display: flex;
   flex-direction: row;
@@ -324,11 +326,38 @@ article {
   font-weight: 800;
 }
 
+.recherche__bouton {
+  padding: 10px 20px;
+  background-color: #d80724;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Nunito", serif;
+}
+
+footer .recherche__bouton {
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Nunito", serif;
+  margin-top: 10px;
+}
+
+.recherche__input {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Nunito", serif;
+}
+
 /* PAGINATION */
 
 .category__pagination {
   margin-bottom: 60px;
   margin-top: 60px;
 }
-
- 

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="hero">
-<?php get_template_part('gabarits/hero'); ?>    
+    <?php get_template_part('gabarits/hero'); ?>
 </section>
 <section class="populaire global">
     <div class="global">
@@ -10,7 +10,7 @@
                 <?php if (in_category('Galerie')) {
                     the_content();
                 } else { ?>
-                   <?php get_template_part('gabarits/carte'); ?>
+                    <?php get_template_part('gabarits/carte'); ?>
                 <?php } ?>
         <?php endwhile;
         endif; ?>
