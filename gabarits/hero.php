@@ -3,24 +3,35 @@
  * Template Name: Hero
  */
 ?>
-<div class="hero__content global">
-    <h1 class="hero__title">
-        <?php bloginfo('name'); ?>
-    </h1>
-    <p class="hero__description">
-        <?php bloginfo('description'); ?>
-    </p>
-    <div class="hero__description">
-        <p>info@bougeottevoyages.com</p>
-        <p>514-123-4567<br>
-            1234 rue de la rue<br>
-            Montréal, QC H1H 1H1</p>
-        <p>Auteur: Mariana Neri Matos</p>
-    </div>
+<?php $hero_title = get_theme_mod('hero_title', 'Default Title'); ?>
+<?php $hero_description = get_theme_mod('hero_description', 'Default Title'); ?>
+<?php $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); ?>
+<?php $hero_telephone = get_theme_mod('hero_telephone', 'Default Title'); ?>
+<?php $hero_email = get_theme_mod('hero_email', 'Default Title'); ?>
+<?php $hero_addresse = get_theme_mod('hero_addresse', 'Default Title'); ?>
+<?php $hero_ville = get_theme_mod('hero_ville', 'Default Title'); ?>
+<?php $hero_background = get_theme_mod('hero_background', 'Default Title'); ?>
+<?php $hero_cta_text = get_theme_mod('hero_cta_text', 'Default Title'); ?>
+<section class="hero__content" style="background-image: url(<?php echo $hero_background ?>);">
+    <div class="global">
+        <h1 class="hero__title">
+            <?php echo $hero_title ?>
+        </h1>
+        <p class="hero__description">
+        <?php echo $hero_description ?>
+        </p>
+        <div class="hero__description">
+            <p><?php echo $hero_email ?><br>
+                <?php echo $hero_telephone ?><br>
+                <?php echo $hero_addresse ?><br>
+                <?php echo $hero_ville ?></p>
+            <p>Auteur: <?php echo $hero_auteur ?></p>
+        </div>
 
-    <div class="hero__cta">
-        <a href="" class="hero__button">Inscrivez-vous</a>
+        <div class="hero__cta">
+            <a href="" class="hero__button"><?php echo $hero_cta_text ?></a>
+        </div>
+        <div class="hero__social"><?php get_template_part('gabarits/icone-sociaux'); ?>
+        </div>
     </div>
-    <div class="hero__social"><?php get_template_part('gabarits/icone-sociaux'); ?>
-    </div>
-</div>
+</section>

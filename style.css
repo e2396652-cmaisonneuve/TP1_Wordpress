@@ -147,7 +147,7 @@ nav ul li:last-child {
 
 .hero {
   min-height: 70vh;
-  background-image: url("images/hero__image.jpg");
+  /* background-image: url("images/hero__image.jpg"); */
   max-width: 100%;
   min-width: 100%;
   object-fit: cover;
