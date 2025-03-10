@@ -265,6 +265,17 @@ footer ul li {
   gap: 10px;
 }
 
+.footer__categories {
+  margin-left: -40px;
+  margin-top: -10px;
+  line-height: 1.5rem;
+}
+
+.footer__horaire {
+  margin-top: -10px;
+  line-height: 1.5rem;
+}
+
 /* ARTICLE */
 
 article {
