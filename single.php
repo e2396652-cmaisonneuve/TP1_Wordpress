@@ -20,9 +20,11 @@
                             </div>
                             <div class="card__content">
                                 <h2 class="card__title"><?php the_title(); ?></h2>
-                                <div class="carte__category"><?php the_category() ?></div>
-                                <p class="card__description">Température maximum: <?php the_field('temperature_maximum') ?> | minimum: <?php the_field('temperature_minimum') ?></p>
+                                <p class="card__content">Température maximum: <?php the_field('temperature_maximum') ?> | minimum: <?php the_field('temperature_minimum') ?></p>
                                 <p class="card__description"><?php the_content() ?></p>
+                                <div class="carte__category"><?php the_category() ?></div>
+                                
+                                
                                 <p></p>
                                 <div>
                                     <p><a href="<?php echo get_home_url(); ?>">
