@@ -86,10 +86,10 @@ p {
 
 a {
   text-decoration: none;
-  color: #d80724;
+  color: var(--font-family-primary);
 }
 a:hover {
-  color: #fd5b71;
+  color: #000;
 }
 
 a,
@@ -102,7 +102,6 @@ a:hover,
 .hero__button:hover,
 .card__button:hover {
   transform: translateY(-3px);
-  background-color: #fd5b71;
 }
 
 picture,
@@ -156,7 +155,7 @@ picture img {
 
 .hero__button {
   padding: 10px 20px;
-  background-color: #d80724;
+  background-color: var(--font-family-primary);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -393,6 +392,14 @@ footer .recherche__bouton {
   margin-top: 60px;
 }
 
+.category__pagination a {
+  color: #d80724;
+}
+
+.category__pagination a:hover {
+  color: #fd5b71;
+}
+
 /** HEADER */
 
 .header__burger {
@@ -468,7 +475,6 @@ footer .recherche__bouton {
   }
 
   .header__navigation nav ul li a:hover {
-    color: #fd5b71;
     background-color: #f0f0f0;
   }
 }
