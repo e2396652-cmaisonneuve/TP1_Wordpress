@@ -23,17 +23,29 @@
                 }
                 ?>
             </figure>
-            <label for="chk-burger" class="header__burger">
-                <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu-alt-1&color=000" width="32" height="32">
+
+            <label for="chk-burger" class="header__burger" aria-label="Abrir menu de navegação">
+                <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu-alt-1&color=000" width="32" height="32" alt="Ícone de menu">
             </label>
-            <input type="checkbox" name="" id="chk-burger" class="chk-burger">
+
+            <input type="checkbox" id="chk-burger" class="chk-burger" aria-hidden="true">
+
             <div class="header__navigation">
-                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu' => 'menu-principal', 'container' => 'nav', 'container_class' => '', 'container_id' => '', 'container_aria_label' => '', 'menu_class' => '')) ?>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'header-menu',
+                    'menu' => 'menu-principal',
+                    'container' => 'nav',
+                    'menu_class' => 'menu-list',
+                    'container_aria_label' => 'Menu principal de navegação'
+                ));
+                ?>
+
                 <form class="recherche" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-                    <label>
-                        <input class="recherche__input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
+                    <label for="search-input">
+                        <input id="search-input" class="recherche__input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" aria-label="Campo de busca" />
                     </label>
-                    <button class="recherche__bouton" type="submit">
+                    <button class="recherche__bouton" type="submit" aria-label="Iniciar pesquisa">
                         Rechercher
                     </button>
                 </form>
