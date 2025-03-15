@@ -23,11 +23,11 @@
                                 <p class="card__content">Température maximum: <?php the_field('temperature_maximum') ?> | minimum: <?php the_field('temperature_minimum') ?></p>
                                 <p class="card__description"><?php the_content() ?></p>
                                 <div class="carte__category"><?php the_category() ?></div>
-                                
-                                
+
+
                                 <p></p>
                                 <div>
-                                    <p><a href="<?php echo get_home_url(); ?>">
+                                    <p class="permalink"><a href="<?php echo get_home_url(); ?>">
                                             ← Return home</a></p>
                                 </div>
                             </div>

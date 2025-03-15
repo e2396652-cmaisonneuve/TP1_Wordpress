@@ -18,7 +18,7 @@
             <?php echo $hero_title ?>
         </h1>
         <p class="hero__description">
-        <?php echo $hero_description ?>
+            <?php echo $hero_description ?>
         </p>
         <div class="hero__description">
             <p><?php echo $hero_email ?><br>

@@ -14,11 +14,13 @@
                     <article>
                         <div class="card card--big">
                             <div class="carte__image">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
-                                }
-                                ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php
+                                    if (has_post_thumbnail()) {
+                                        the_post_thumbnail('medium');
+                                    }
+                                    ?>
+                                </a>
                             </div>
                             <div class="card__content">
                                 <a href="<?php the_permalink(); ?>">

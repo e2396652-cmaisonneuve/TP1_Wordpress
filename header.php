@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Bougeotte Voyages</title>
     <?php wp_head(); ?>
 </head>
 
 <body>
+    <div id="top"></div>
     <header>
         <div class="header global">
 
@@ -23,6 +25,7 @@
                 }
                 ?>
             </figure>
+
 
             <label for="chk-burger" class="header__burger" aria-label="Abrir menu de navegação">
                 <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu-alt-1&color=000" width="32" height="32" alt="Ícone de menu">
