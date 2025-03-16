@@ -13,8 +13,8 @@
 
 <body>
     <div id="top"></div>
-    <header>
-        <div class="header global">
+    <header class="header">
+        <div class="header__container">
 
             <figure class="header__logo">
                 <?php
