@@ -6,40 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Bougeotte Voyages</title>
     <?php wp_head(); ?>
 </head>
 
 <body>
-    <header>
-        <div class="header global">
+    <div id="top"></div>
+    <header class="header">
+        <div class="header__container">
+
             <figure class="header__logo">
-                <img src="<?php echo get_template_directory_uri() . '/images/logo-bougeotte.jpg' ?>">
+                <?php
+                if (function_exists('the_custom_logo')) {
+                    the_custom_logo();
+                } else {
+                    echo '<a href="' . esc_url(home_url('/')) . '">' . get_bloginfo('name') . '</a>';
+                }
+                ?>
             </figure>
-            <label for="chk-burger" class="header__burger">
-                <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu-alt-1&color=000" width="32" height="32">
+
+
+            <label for="chk-burger" class="header__burger" aria-label="Abrir menu de navegação">
+                <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu-alt-1&color=000" width="32" height="32" alt="Ícone de menu">
             </label>
-            <input type="checkbox" name="" id="chk-burger" class="chk-burger">
+
+            <input type="checkbox" id="chk-burger" class="chk-burger" aria-hidden="true">
+
             <div class="header__navigation">
-                <nav class="header__menu">
-                    <ul class="menu">
-                        <li class="menu__item"><a href="" class="menu__item__a">Sport</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Nature</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Cruise</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Adventure</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Cultural</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Pause</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Zen</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Economic</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Favorite</a></li>
-                        <li class="menu__item"><a href="" class="menu__item__a">Country</a></li>
-                    </ul>
-                </nav>
-                <form class="search">
-                    <input type="text" placeholder="Search" class="search__input">
-                    <img class="search__img" src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="16"
-                        height="16">
-                </form>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'header-menu',
+                    'menu' => 'menu-principal',
+                    'container' => 'nav',
+                    'menu_class' => 'menu-list',
+                    'container_aria_label' => 'Menu principal de navigation'
+                ));
+                ?>
+
+                <?php get_search_form(); ?>
             </div>
         </div>
     </header>
