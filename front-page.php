@@ -30,6 +30,7 @@
     </section>
 
     <section class="global destination">
+        <h2 class="center">Destinations par catégorie</h2>
         <?php get_template_part('gabarits/destination'); ?>
     </section>
 

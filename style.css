@@ -1048,19 +1048,98 @@ nav ul li a:hover::after {
 
 /* LIST CATEGORIE */
 
-.categorie__ul{
+.categorie__ul {
   list-style: none;
   padding: 0;
-  margin:0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
 }
 
-.categorie__ul__li{
-  padding: 3px 4px;
+.categorie__ul__li {
+  display: inline-block;
+  margin-right: 10px;
   cursor: pointer;
-  background-color: #d80724;
-  color: #fff;
+  padding: 8px 15px;
+  background: #d80724;
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s;
+  font-size: 1.5rem;
+}
+
+.categorie__ul__li:hover,
+.categorie__ul__li.active {
+  background: #000;
+  color: white;
+}
+
+.destination__accordion {
+  margin-top: 20px;
+  position: relative;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 15px;
+  background-color: #f5f5f5;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  padding: 0 15px;
+  background-color: white;
+  max-height: 0;
+}
+
+.accordion-item.active .accordion-content {
+  padding: 15px;
+  max-height: none;
+  height: auto;
+  overflow-y: auto;
+  max-height: 400vh;
+}
+
+.accordion-article {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.accordion-article:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.card__description {
+  margin: 10px 0;
+}
+
+.accordion-article a {
+  color: #d80724;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.accordion-article a:hover {
+  text-decoration: underline;
 }
