@@ -3,6 +3,77 @@
 function theme_tp_customize_register($wp_customize)
 {
     // Le code pour ajouter des sections, des réglages et des contrôles ira ici.
+
+    /////////////////////////////////////////////////////// SECTION 404 - EPREUVE FINALE
+
+    $wp_customize->add_section('page404', array(
+        'title' => __('Section 404', 'theme_tp'),
+        'priority' => 30,
+
+    ));
+
+    //Ajoute title dans la page 404
+    $wp_customize->add_setting('page404_titre', array(
+        'default' => __('Titre default', 'theme_tp'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('page404_titre', array(
+        'label' => __('404 Titre', 'theme_tp'),
+        'section' => 'page404',
+        'type' => 'text',
+    ));
+
+    //Ajoute message dans la page 404
+    $wp_customize->add_setting('page404_message', array(
+        'default' => __('Lorem ipsum', 'theme_tp'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('page404_message', array(
+        'label' => __('page404 message', 'theme_tp'),
+        'section' => 'page404',
+        'type' => 'text',
+    ));
+
+
+    //Ajoute du CTA dans la page 404
+
+    $wp_customize->add_setting('page404_cta_text', array(
+        'default' => __('Learn More', 'theme_tp'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('page404_cta_text', array(
+        'label' => __('CTA Button Text', 'theme_tp'),
+        'section' => 'page404',
+        'type' => 'text',
+    ));
+
+    //Ajoute du couleur dans la page 404
+
+    $wp_customize->add_setting('page404_couleur', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'page404_couleur', array(
+        'label' => __('404 Couleur', 'theme_tp'),
+        'section' => 'page404',
+    )));
+
+    //Ajoute du background dans la page 404
+
+    $wp_customize->add_setting('page404_background', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'page404_background', array(
+        'label' => __('404 Background Image', 'theme_tp'),
+        'section' => 'page404',
+    )));
+
     
     
     /////////////////////////////////////////////////////// HERO SECTION
