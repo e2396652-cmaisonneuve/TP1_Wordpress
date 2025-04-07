@@ -1143,3 +1143,70 @@ nav ul li a:hover::after {
 .accordion-article a:hover {
   text-decoration: underline;
 }
+
+
+/* 404 - EPREUVE FINALE */
+
+.page404 {
+  min-height: 70vh;
+  max-width: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  background-position: top center;
+  background-attachment: fixed; /* Parallax Effect */
+  background-size: cover;
+}
+
+.page404__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  margin: auto;
+  padding: 40px;
+  display: block;
+  color: #fff;
+  max-width: 50vw;
+
+}
+
+.page404__titre {
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+.page404__message {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px
+}
+
+.page404__cta {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+
+.page404__button {
+  padding: 10px 20px;
+  background-color: #d80724;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.menu404 ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu404 ul li {
+  list-style-type: none;
+}
+
+.menu404 ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  position: relative;
+  transition: all 0.3s ease;
+}
