@@ -1165,7 +1165,7 @@ nav ul li a:hover::after {
   padding: 40px;
   display: block;
   color: #fff;
-  max-width: 50vw;
+  max-width: 55vw;
 
 }
 
@@ -1184,6 +1184,11 @@ nav ul li a:hover::after {
 .page404__cta {
   margin-top: 25px;
   margin-bottom: 35px;
+}
+
+.page404__recherche {
+  align-content: center;
+  align-items: center;
 }
 
 .page404__button {
@@ -1209,4 +1214,18 @@ nav ul li a:hover::after {
   color: #FFFFFF;
   position: relative;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .page404__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin: auto;
+    padding: 20px;
+    display: block;
+    color: #fff;
+    max-width: 80vw;
+  
+  }
 }

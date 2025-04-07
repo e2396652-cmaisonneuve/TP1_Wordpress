@@ -31,8 +31,7 @@
         <div class="page404__cta">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="page404__button"><?php echo $page404_cta_text ?></a>
         </div>
-    </div>
- <div class="menu404">
+        <div class="menu404">
  <?php
                 wp_nav_menu(array(
                     'theme_location' => '404-menu',
@@ -46,7 +45,11 @@
 
 
     </div>
-    <div><?php get_search_form(); ?></div>
+    <div class="page404__recherche">
+        <?php get_search_form(); ?>
+    </div>
+    </div>
+ 
  </div>
     
 </section>
